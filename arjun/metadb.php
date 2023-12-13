@@ -8,7 +8,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 ?>
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include 'partials/_dbconnect.php';
+    include 'config.php';
    
     $name = $_POST['name'];
     $property = $_POST['property'];
@@ -107,7 +107,7 @@ $sql = "INSERT INTO meta (name, property, content, menu_id, tag_id, course_id, s
             </div>
         </div>
     </div>
-    <?php require 'partials/_head.php' ?>
+    <?php require 'header.php' ?>
     <!-- Your form goes here -->
     <div class="main-content" style="min-height: 647px;">
         <section class="section">
@@ -307,7 +307,7 @@ $sql = "INSERT INTO meta (name, property, content, menu_id, tag_id, course_id, s
                                 <tbody>
                                     <?php
             // Database connection code goes here
-            include 'partials/_dbconnect.php';
+            include 'config.php';
             $sql = "SELECT * FROM meta";
             $result = $conn->query($sql);
             $sno = 0;
@@ -336,7 +336,7 @@ $sql = "INSERT INTO meta (name, property, content, menu_id, tag_id, course_id, s
                     </div>
                 </div>
 
-                <?php require 'partials/_foot.php' ?>
+                <?php require 'footer.php' ?>
                 <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
                 <script>
                     $(document).ready(function () {
