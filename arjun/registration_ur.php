@@ -1,6 +1,6 @@
 <?php
 // Include your database connection script
-include 'partials/_dbconnect.php';
+include 'config.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Extract data from POST
     $student_id = $_POST['student_id'];
