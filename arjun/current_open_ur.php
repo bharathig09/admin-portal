@@ -1,8 +1,6 @@
 <?php
-session_start();
-$username = $_SESSION['username'];
 // Include your database connection script
-include 'partials/_dbconnect.php';
+include 'config.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Extract data from POST
     $course_id = $_POST['course_id'];
