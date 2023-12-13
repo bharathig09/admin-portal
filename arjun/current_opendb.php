@@ -9,7 +9,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 ?>
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include 'partials/_dbconnect.php';
+    include 'config.php';
    
     $course_id = $_POST['course_id'];
     $course_name =  $_POST['course_name_input']; 
@@ -65,7 +65,7 @@ $sql = "INSERT INTO current_opening (course_id, course_name, no_of_openings, hir
                                                             style="color: red;">*</span></label>
                                                     <!-- PHP code to fetch course names from the database -->
                                                     <?php
-                                        include 'partials/_dbconnect.php';                                        
+                                        include 'config.php';                                        
                                         // Fetch course names from the database
                                         $sql = "SELECT course_id, course_name FROM courses";
                                         $result = $conn->query($sql);
@@ -130,7 +130,7 @@ $sql = "INSERT INTO current_opening (course_id, course_name, no_of_openings, hir
             </div>
         </div>
     </div>
-    <?php require 'partials/_head.php' ?>
+    <?php require 'header.php' ?>
     <!-- Your form goes here -->
     <div class="main-content" style="min-height: 647px;">
         <section class="section">
@@ -169,7 +169,7 @@ $sql = "INSERT INTO current_opening (course_id, course_name, no_of_openings, hir
                                                             style="color: red;">*</span></label>
                                                     <!-- PHP code to fetch course names from the database -->
                                                     <?php
-                                        include 'partials/_dbconnect.php';                                        
+                                        include 'congig.php';                                        
                                         // Fetch course names from the database
                                         $sql = "SELECT course_id, course_name FROM courses";
                                         $result = $conn->query($sql);
@@ -283,7 +283,7 @@ $sql = "INSERT INTO current_opening (course_id, course_name, no_of_openings, hir
                                 <tbody>
                                     <?php
             // Database connection code goes here
-            include 'partials/_dbconnect.php';
+            include 'config.php';
             $sql = "SELECT * FROM current_opening";
             $result = $conn->query($sql);
             $sno = 0;
@@ -309,7 +309,7 @@ $sql = "INSERT INTO current_opening (course_id, course_name, no_of_openings, hir
                     </div>
                 </div>
 
-                <?php require 'partials/_foot.php' ?>
+                <?php require 'footer.php' ?>
                 <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
                 <script>
                     $(document).ready(function () {
