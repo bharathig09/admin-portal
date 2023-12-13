@@ -1,6 +1,6 @@
 <?php
 // Database connection code goes here
-include 'partials/_dbconnect.php';
+include 'config.php';
 // Check if menu_id is set
 if(isset($_POST['course_id'])) {
     $course_id = $_POST['course_id'];
