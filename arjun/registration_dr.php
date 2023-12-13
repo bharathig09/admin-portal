@@ -1,6 +1,6 @@
 <?php
 // Database connection code goes here
-include 'partials/_dbconnect.php';
+include 'config.php';
 // Check if student_id is set
 if(isset($_POST['student_id'])) {
     $student_id = $_POST['student_id'];
