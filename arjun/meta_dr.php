@@ -1,6 +1,6 @@
 <?php
 // Database connection code goes here
-include 'partials/_dbconnect.php';
+include 'config.php';
 // Check if meta_id is set
 if(isset($_POST['meta_id'])) {
     $meta_id = $_POST['meta_id'];
